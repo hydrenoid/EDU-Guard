@@ -39,8 +39,9 @@ The framework utilizes a "Spoiler" control group—tutors programmed to fail—t
 * **RAM:** 16GB minimum.
 
 ### Software & Environment
-* **Language:** Python 3.11 or 3.12.
+* **Language:** Python 3.11.9
 * **Local Inference Engine:** LM Studio or Ollama (must provide an OpenAI-compatible API endpoint at `localhost:1234`).
+* **Model Used:** zai-org/glm-4.6v-flash
 * **Primary Libraries:**
     * `openai`: For API orchestration.
     * `tqdm`: For progress monitoring during bulk generation.
