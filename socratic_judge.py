@@ -54,7 +54,7 @@ def extract_json(text):
 # ==========================================
 def evaluate_sessions(input_file, output_file):
     if not os.path.exists(input_file):
-        print(f"❌ Error: {input_file} not found. Run the generator first.")
+        print(f"Error: {input_file} not found. Run the generator first.")
         return
 
     # Load all sessions
@@ -63,7 +63,7 @@ def evaluate_sessions(input_file, output_file):
         for line in f:
             sessions.append(json.loads(line))
 
-    print(f"🧐 Auditing {len(sessions)} sessions using {MODEL_NAME}...")
+    print(f"Auditing {len(sessions)} sessions using {MODEL_NAME}...")
 
     # Open output file in append mode
     with open(output_file, 'a') as out_f:
@@ -102,7 +102,7 @@ def evaluate_sessions(input_file, output_file):
 
             except Exception as e:
                 # Log the specific error and the model's raw output for debugging
-                print(f"\n⚠️ Failed session {session.get('session_id')}: {str(e)}")
+                print(f"\nFailed session {session.get('session_id')}: {str(e)}")
                 # Optional: print(f"Raw output was: {raw_output}")
 
 
