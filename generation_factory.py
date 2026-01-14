@@ -130,7 +130,7 @@ def run_factory(iterations=1):
     output_file = "data/edu_guard_dataset.jsonl"
     total = len(subjects) * len(tutor_profiles) * len(student_profiles) * iterations
 
-    print(f"🚀 Starting EDU-Guard Factory: {total} sessions.")
+    print(f"Starting EDU-Guard Factory: {total} sessions.")
 
     with tqdm(total=total, desc="Generating Sessions") as pbar:
         for subject in subjects:
