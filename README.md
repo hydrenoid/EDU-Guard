@@ -21,7 +21,7 @@ To mitigate **Persona Drift**—a common failure mode in Small Language Models (
 ### 2. Resilient Data Parsing
 The evaluation pipeline includes a defensive extraction layer. Using regular expression patterns, the system isolates structured JSON payloads from non-deterministic model outputs. This ensures that even if the Auditor LLM includes conversational preamble, the downstream statistical analysis remains uninterrupted.
 
-
+![Project Overview](design/Flowchart)
 
 ### 3. Benchmarking Methodology
 The framework utilizes a "Spoiler" control group—tutors programmed to fail—to calibrate the Auditor’s sensitivity. This allows for the calculation of precision and recall metrics regarding the Auditor's ability to detect pedagogical violations.
